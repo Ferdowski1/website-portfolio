@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import supabase from "../../../utils/supabaseClient"
 
 type Player = {
   id: number;
@@ -26,11 +27,27 @@ export default function PremierFantasy() {
   const [filterType, setFilterType] = useState("name"); // default
 
 
+  // useEffect(() => {
+  //   fetch("http://localhost:8080/api/v1/player")
+  //     .then((res) => res.json())
+  //     .then((data) => setPlayers(Array.isArray(data) ? data : [data]))
+  //     .catch((error) => console.error("Error fetching players:", error));
+  // }, []);
+
   useEffect(() => {
-    fetch("http://localhost:8080/api/v1/player")
-      .then((res) => res.json())
-      .then((data) => setPlayers(Array.isArray(data) ? data : [data]))
-      .catch((error) => console.error("Error fetching players:", error));
+    const fetchPlayers = async () => {
+      const { data, error } = await supabase
+        .from('all_players_data')
+        .select('*');
+  
+      if (error) {
+        console.error('Error fetching players:', error);
+      } else {
+        setPlayers(data);
+      }
+    };
+  
+    fetchPlayers();
   }, []);
 
   // Filter players based on search text (case-insensitive)

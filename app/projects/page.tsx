@@ -9,7 +9,7 @@ export default function Projects() {
       <div className="flex flex-col sm:flex-row items-center gap-8 mb-12">
         <div className="w-full sm:w-1/2 flex justify-center">
           <Image 
-            src="/prem_fantasy.png" 
+            src="/fantasy.png" 
             alt="Project 1" 
             width={400} 
             height={300} 
@@ -23,7 +23,7 @@ export default function Projects() {
             I'm a huge soccer fan. Especially for the Premier League. I created this Premier League Fantasy app where you can create your own starting 11. This app uses a Postgresql database with Spring Boot for apis.
           </p>
           <a 
-            href="/projects/premier-fantasy"
+            href="/projects/premier-fantasy/my-team"
             className="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
           >
             View Project

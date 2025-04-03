@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import supabase from "../../../utils/supabaseClient"
+import Link from "next/link";
 
 type Player = {
   id: number;
@@ -24,15 +25,7 @@ type Player = {
 export default function PremierFantasy() {
   const [players, setPlayers] = useState<Player[]>([]);
   const [search, setSearch] = useState("");
-  const [filterType, setFilterType] = useState("name"); // default
-
-
-  // useEffect(() => {
-  //   fetch("http://localhost:8080/api/v1/player")
-  //     .then((res) => res.json())
-  //     .then((data) => setPlayers(Array.isArray(data) ? data : [data]))
-  //     .catch((error) => console.error("Error fetching players:", error));
-  // }, []);
+  const [filterType, setFilterType] = useState("name"); 
 
   useEffect(() => {
     const fetchPlayers = async () => {
@@ -59,7 +52,7 @@ export default function PremierFantasy() {
     switch (filterType) {
       case "name":
         return player.name.toLowerCase().includes(lowerSearch);
-      case "club": // maps to team
+      case "club": 
         return player.team.toLowerCase().includes(lowerSearch);
       case "nation":
         return player.nation.toLowerCase().includes(lowerSearch);
@@ -81,8 +74,18 @@ export default function PremierFantasy() {
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-12" style={{ backgroundColor: "#2596be" }}>
-      <h1 className="text-3xl text-black font-bold text-center mb-8">Premier Fantasy App</h1>
-
+      <div className="flex items-center justify-between mb-8">
+        <div className="flex-1 text-center">
+          <h1 className="text-3xl text-black font-bold">Premier Fantasy App</h1>
+        </div>
+        <div>
+        <a href="/projects/premier-fantasy/my-team">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:cursor-pointer">
+              Your Team
+            </button>
+          </a>
+        </div>
+      </div>
       <div className="mb-6 flex flex-col sm:flex-row justify-center items-center gap-4">
         <select
           value={filterType}

@@ -6,7 +6,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white text-black shadow-md fixed top-0 left-0">
+    <header className="w-full bg-white text-black shadow-md z-50 fixed top-0 left-0">
       <nav className="max-w-6xl mx-auto flex items-center justify-between p-4">
         <Link href="/" className="text-xl font-bold tracking-wide">
           Nathan Ferdowski

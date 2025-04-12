@@ -7,7 +7,7 @@ export default function Home() {
       {/* Left Side - Image */}
       <div className="w-full sm:w-1/2 flex justify-center">
         <Image
-          src="/placeholder.jpg"
+          src="/me.png"
           alt="Profile Picture"
           width={300}
           height={300}

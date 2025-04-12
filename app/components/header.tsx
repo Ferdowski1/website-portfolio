@@ -15,8 +15,8 @@ export default function Header() {
         {/* Right Side: Navigation Links (Desktop) */}
         <div className="hidden sm:flex space-x-6">
           <Link href="/about" className="hover:text-gray-300">About</Link>
-          <Link href="/experience" className="hover:text-gray-300">Experience</Link>
-          <Link href="/projects" className="hover:text-gray-300">Projects</Link>
+          <Link href="/work" className="hover:text-gray-300">Work</Link>
+          <Link href="/portfolio" className="hover:text-gray-300">Portfolio</Link>
           <Link href="/contact" className="hover:text-gray-300">Contact</Link>
         </div>
 

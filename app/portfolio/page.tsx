@@ -1,4 +1,7 @@
+'use client';
+
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const projects = [
   {
@@ -44,6 +47,15 @@ const projects = [
 ];
 
 export default function Portfolio() {
+  const [loadedCount, setLoadedCount] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    if (loadedCount === projects.length) {
+      setImagesLoaded(true);
+    }
+  }, [loadedCount]);
+
   return (
     <section className="max-w-6xl mx-auto px-6 py-12 text-white">
       <h1 className="text-3xl font-bold text-center mb-12">My Projects</h1>
@@ -52,7 +64,8 @@ export default function Portfolio() {
         {projects.map((project, idx) => (
           <div
             key={idx}
-            className="bg-zinc-900 p-5 rounded-lg shadow-md flex flex-col justify-between transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg cursor-pointer"
+            className={`bg-zinc-900 p-5 rounded-lg shadow-md flex flex-col justify-between transition-transform duration-500 hover:scale-[1.03] hover:shadow-lg cursor-pointer
+              ${imagesLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-600 ease-in-out`}
           >
             <div>
               <div className="w-auto h-40 relative mb-4 rounded-md overflow-hidden">
@@ -61,14 +74,15 @@ export default function Portfolio() {
                   alt={project.title}
                   fill
                   className="object-cover"
+                  onLoad={() => setLoadedCount((prev) => prev + 1)}
                 />
               </div>
 
-              <h2 className="text-lg font-semibold mb-2">{project.title}</h2>
+              <h2 className="text-lg font-semibold mb-2 text-center">{project.title}</h2>
               <p className="text-sm text-gray-200">{project.desc}</p>
 
               <div className="flex flex-wrap gap-2 mt-4 text-xs text-gray-400">
-                {project.tech.map((t, i) => ( 
+                {project.tech.map((t, i) => (
                   <span
                     key={i}
                     className="bg-zinc-800 px-2 py-1 rounded whitespace-nowrap"
@@ -79,7 +93,6 @@ export default function Portfolio() {
               </div>
             </div>
 
-
             {(project.github || project.link) && (
               <div className="mt-6 flex items-center gap-4">
                 {project.github && (
@@ -89,7 +102,7 @@ export default function Portfolio() {
                     className="inline-flex items-center gap-2 text-sm hover:opacity-80 transition"
                   >
                     <img
-                      src="/github-white.png" 
+                      src="/github-white.png"
                       alt="GitHub"
                       className="w-5 h-5"
                     />
@@ -103,7 +116,7 @@ export default function Portfolio() {
                     className="text-blue-400 hover:underline text-sm"
                   >
                     <img
-                      src="/external-link.png" 
+                      src="/external-link.png"
                       alt="Link"
                       className="w-7 h-7"
                     />

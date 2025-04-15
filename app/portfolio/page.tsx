@@ -19,8 +19,8 @@ const projects = [
       "Full-stack tracker that monitors Litecoin blockchain activity and flags large wallet movements in real time. Built with Python and PostgreSQL on AWS EC2, and visualized through a dynamic Next.js frontend. Ideal for spotting buy/sell pressure from top holders.",
     img: "/ltcwhales.png",
     tech: ["Next.js", "PostgreSQL",  "AWS EC2",  "Blockchain",  "Python"],
-    link: "/portfolio/litecoin-whales",
-    github: " ",
+    /*link: "/portfolio/litecoin-whales",
+    github: " ",*/
     telegram: "https://t.me/litecointop200"
   },
   {

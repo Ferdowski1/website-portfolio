@@ -8,15 +8,25 @@ const projects = [
     title: "Premier League Fantasy App",
     desc:
       "Fantasy app where users create their own custom Premier League team using a FIFA Ultimate Team-style interface. Powered by a Spring Boot backend and PostgreSQL, with over 600 players and a clean Next.js frontend.",
-    img: "/top_fantasy.png",
+    img: "/myteam.png",
     tech: ["Spring Boot", "PostgreSQL", "Next.js", "Tailwind CSS"],
     link: "/portfolio/premier-fantasy-team",
     github: "https://github.com/Ferdowski1/premier-fantasy-backend"
   },
   {
+    title: "Litecoin Whale Watcher",
+    desc:
+      "Full-stack tracker that monitors Litecoin blockchain activity and flags large wallet movements in real time. Built with Python and PostgreSQL on AWS EC2, and visualized through a dynamic Next.js frontend. Ideal for spotting buy/sell pressure from top holders.",
+    img: "/ltcwhales.png",
+    tech: ["Next.js", "PostgreSQL",  "AWS EC2",  "Blockchain",  "Python"],
+    link: "/portfolio/litecoin-whales",
+    github: " ",
+    telegram: "https://t.me/litecointop200"
+  },
+  {
     title: "YouTube Channel",
     desc:
-      "Educational content on Bitcoin and crypto. I share technical analysis, charts, market insights, and trading models for investors at all levels.",
+      "I share my personal views on the crypto market, covering Bitcoin, Litecoin, and altcoins. Videos include technical analysis, custom indicators, and market breakdowns, with a focus on long-term trends and on-chain activity.",
     img: "/ada.png",
     tech: ["YouTube", "Crypto", "Finance", "Trading"],
     link: "https://www.youtube.com/@skiis1"
@@ -28,14 +38,6 @@ const projects = [
     img: "/yt-bookmarker.png",
     tech: ["JavaScript", "Chrome Extension", "HTML", "DOM"],
     github: "https://github.com/Ferdowski1/YouTube-Bookmarker"
-  },
-  {
-    title: "Litecoin Indicators",
-    desc:
-      "Developed custom Litecoin indicators like Power Bands to visualize long-term price patterns and wallet activity. Also building a Litecoin Risk Indicator.",
-    img: "/ltc_pgr.webp",
-    tech: ["Python", "Matplotlib", "Pine Script"],
-    link: "https://www.youtube.com/playlist?list=PLna8qj1ZuaSUsT7QA0mTehDO5_UXw2ijR"
   },
   {
     title: "Fish Frenzy",
@@ -58,7 +60,7 @@ export default function Portfolio() {
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-12 text-white">
-      <h1 className="text-3xl font-bold text-center mb-12">My Projects</h1>
+      <h1 className="text-3xl font-bold text-black text-center mb-12">My Portfolio</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, idx) => (
@@ -93,27 +95,40 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {(project.github || project.link) && (
+            {(project.github || project.link || project.telegram) && (
               <div className="mt-6 flex items-center gap-4">
                 {project.github && (
                   <a
                     href={project.github}
                     target="_blank"
-                    className="inline-flex items-center gap-2 text-sm hover:opacity-80 transition"
+                    className="hover:opacity-80"
                   >
                     <img
                       src="/github-white.png"
                       alt="GitHub"
-                      className="w-5 h-5"
+                      className="w-6 h-6"
                     />
                   </a>
                 )}
 
+                {project.telegram && (
+                  <a
+                    href={project.telegram}
+                    target="_blank"
+                    className="hover:opacity-80"
+                  >
+                    <img
+                      src="/telegram.png"
+                      alt="Telegram"
+                      className="w-7 h-7"
+                    />
+                  </a>
+                )}  
+
                 {project.link && (
                   <a
                     href={project.link}
-                    target="_blank"
-                    className="text-blue-400 hover:underline text-sm"
+                    className="hover:opacity-80"
                   >
                     <img
                       src="/external-link.png"

@@ -21,7 +21,8 @@ const projects = [
     tech: ["Next.js", "PostgreSQL",  "AWS EC2",  "Blockchain",  "Python"],
     link: "/portfolio/litecoin-whales",
     github: "",
-    telegram: "https://t.me/litecointop200"
+    telegram: "https://t.me/litecointop200",
+    youtube: "https://www.youtube.com/playlist?list=PLna8qj1ZuaSUsT7QA0mTehDO5_UXw2ijR"
   },
   {
     title: "YouTube Channel",
@@ -29,7 +30,7 @@ const projects = [
       "I share my personal views on the crypto market, covering Bitcoin, Litecoin, and altcoins. Videos include technical analysis, custom indicators, and market breakdowns, with a focus on long-term trends and on-chain activity.",
     img: "/ada.png",
     tech: ["YouTube", "Crypto", "Finance", "Trading"],
-    link: "https://www.youtube.com/@skiis1"
+    youtube: "https://www.youtube.com/@skiis1"
   },
   {
     title: "YouTube Bookmarker",
@@ -95,7 +96,7 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {(project.github || project.link || project.telegram) && (
+            {(project.github || project.link || project.telegram || project.youtube) && (
               <div className="mt-6 flex items-center gap-4">
                 {project.github && (
                   <a
@@ -125,14 +126,28 @@ export default function Portfolio() {
                   </a>
                 )}  
 
+                {project.youtube && (
+                  <a
+                    href={project.youtube}
+                    target="_blank"
+                    className="hover:opacity-80"
+                  >
+                    <img
+                      src="/youtubelogo.png"
+                      alt="YouTube"
+                      className="w-8 h-8"
+                    />
+                  </a>
+                )}
+
                 {project.link && (
                   <a
                     href={project.link}
                     className="hover:opacity-80"
                   >
                     <img
-                      src="/external-link.png"
-                      alt="Link"
+                      src="/folder.png"
+                      alt="App"
                       className="w-7 h-7"
                     />
                   </a>

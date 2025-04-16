@@ -16,12 +16,12 @@ type WhaleActivity = {
 export default function LitecoinWhales() {
   const [whales, setWhales] = useState<WhaleActivity[]>([]);
   const [sortBy, setSortBy] = useState<'time' | 'amount'>('time');
-  const [directionFilter, setDirectionFilter] = useState<'Both' | 'Buy' | 'Sell'>('Both');
+  const [directionFilter, setDirectionFilter] = useState<'both' | 'buy' | 'sell'>('both');
   const [minAmountInput, setMinAmountInput] = useState('');
   const [minAmount, setMinAmount] = useState(0);
 
 
-  const api = 'http://3.22.68.141:3001/api/whales';
+  const api = 'https://api.nathanferdowski.dev/api/whales';
 
   useEffect(() => {
     const fetchWhales = async () => {
@@ -57,7 +57,7 @@ export default function LitecoinWhales() {
             <select
               className="border border-gray rounded px-2 py-1 cursor-pointer"
               value={directionFilter}
-              onChange={(e) => setDirectionFilter(e.target.value as 'Both' | 'Buy' | 'Sell')}
+              onChange={(e) => setDirectionFilter(e.target.value as 'both' | 'buy' | 'sell')}
             >
               <option value="all">Both</option>
               <option value="buy">Buy</option>
@@ -84,8 +84,8 @@ export default function LitecoinWhales() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
         {whales.filter((w) => {
-            if (directionFilter === 'Buy') return w.direction === 'buy';
-            if (directionFilter === 'Sell') return w.direction === 'sell';
+            if (directionFilter === 'buy') return w.direction === 'buy';
+            if (directionFilter === 'sell') return w.direction === 'sell';
             return true; 
           })
           .filter((w) => w.amount >= minAmount)

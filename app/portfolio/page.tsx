@@ -20,7 +20,7 @@ const projects = [
     img: "/ltcwhales.png",
     tech: ["Next.js", "PostgreSQL",  "AWS EC2",  "Blockchain",  "Python"],
     link: "/portfolio/litecoin-whales",
-    github: "",
+    github: "https://github.com/Ferdowski1/litecoin-whale-tracker",
     telegram: "https://t.me/litecointop200",
     youtube: "https://www.youtube.com/playlist?list=PLna8qj1ZuaSUsT7QA0mTehDO5_UXw2ijR"
   },

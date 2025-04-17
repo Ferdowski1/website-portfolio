@@ -6,6 +6,7 @@ export default function About() {
   const [youtubeLoaded, setYoutubeLoaded] = useState(false);
   const [golfLoaded, setGolfLoaded] = useState(true);
   const [currentSection, setCurrentSection] = useState("about-me");
+  const [isOpen, setIsOpen] = useState(false);
 
   const videos: { [key: string]: string } = {
     bitcoin: "n8QjQh5BHks",
@@ -38,7 +39,7 @@ export default function About() {
     >
       {/* Dot Navigation */}
       <div className="fixed right-6 top-1/2 transform -translate-y-1/2 flex flex-col items-center gap-4 z-50">
-        {["about-me", "youtube-videos", "power-model"].map((id) => (
+        {["about-me", "youtube-videos", "power-model", "golf-swing"].map((id) => (
           <a
             key={id}
             href={`#${id}`}
@@ -55,7 +56,7 @@ export default function About() {
         className="snap-start h-screen px-6 py-12 max-w-5xl mx-auto text-black"
       >
         <div className="h-full flex flex-col justify-center space-y-6">
-          <h1 className="text-3xl font-bold mb-6">About Me</h1>
+          <h1 className="text-5xl font-bold mb-6">About Me</h1>
           <p>
             Hi, I’m Nathan Ferdowski. I graduated from the University of Illinois Urbana-Champaign with a degree in Computer Engineering. Since then, I've worked as a software developer at <strong>AT&T</strong> and <strong>SkillStorm</strong>, where I contributed to building scalable systems and enterprise applications.
           </p>
@@ -122,31 +123,78 @@ export default function About() {
         </div>
       </section>
 
-      {/* Power Model or Future Section Placeholder */}
+      {/* Power Model */}
       <section
-        id="power-model"
-        className="snap-start h-screen px-6 py-12 max-w-5xl mx-auto text-black"
-      >
-        <div className="h-full flex flex-col justify-center space-y-4">
+      id="power-model"
+      className="snap-start h-screen px-6 py-12 max-w-5xl mx-auto text-black"
+    >
+      <div className="h-full flex items-center justify-center">
+        <div className="scale-[0.9] transform origin-center flex flex-col justify-center space-y-4">
           <h2 className="text-4xl font-semibold text-center">
             Litecoin Power Model & Market Analysis
           </h2>
+
+          {/* Thumbnail image */}
           <img
             src="/power.png"
             alt="Litecoin Power Model"
-            className="w-full"
+            className="w-full cursor-pointer"
+            onClick={() => setIsOpen(true)}
           />
-          <p className="">
-          I developed a Litecoin Power Model to examine over a decade of historical price data using a log-log power regression. The model follows the form Price = a × Weekᵇ, designed to capture the long-term structural trend of Litecoin’s weekly closing prices. Around this fitted curve, I calculated standard deviation bands in logarithmic space to help quantify where price action sits relative to historical trend behavior, highlighting both overbought and oversold regions over time.
 
-           In the chart, the blue line represents the core power model, while each green band reflects one standard deviation above or below it. The model and bands were generated in Python (using Matplotlib and SciPy), then deployed to TradingView using Pine Script for real-time visualization anchored to Litecoin's early price history.
+          {/* Description */}
+          <p>
+            I developed a Litecoin Power Model to examine over a decade of historical price data using a log-log power regression. The model follows the form Price = a × Weekᵇ, designed to capture the long-term structural trend of Litecoin’s weekly closing prices. Around this fitted curve, I calculated standard deviation bands in logarithmic space to help quantify where price action sits relative to historical trend behavior, highlighting both overbought and oversold regions over time.
+
+            In the chart, the blue line represents the core power model, while each green band reflects one standard deviation above or below it. The model and bands were generated in Python (using Matplotlib and SciPy), then deployed to TradingView using Pine Script for real-time visualization anchored to Litecoin's early price history.
 
             Notably, each market cycle has shown Litecoin peaking at a progressively lower deviation band, with the last top reaching just above +4σ. If this long-term pattern continues, the next significant peak could align with the +3σ band, forming a potential triple top structure across cycles.
 
             This model doesn’t aim to predict short-term fluctuations, but rather provides a long-term valuation framework to better understand where Litecoin currently stands within its broader market trajectory.
           </p>
         </div>
-      </section>
+      </div>
+
+      {/* Modal popup */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+          {/* Close button */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-400 cursor-pointer focus:outline-none"
+            aria-label="Close"
+          >
+            x
+          </button>
+
+          {/* Enlarged image */}
+          <img
+            src="/power.png"
+            alt="Litecoin Fullscreen"
+            className="max-w-full max-h-full rounded-md shadow-lg"
+          />
+        </div>
+      )}
+    </section>
+
+    <section
+  id="golf-swing"
+  className="snap-start h-screen px-6 py-12 max-w-5xl mx-auto text-black overflow-y-auto"
+>
+  <div className="min-h-full flex flex-col justify-center space-y-4">
+    <h2 className="text-4xl font-semibold text-center">My golf swing (Still working on it)</h2>
+    
+    <video
+      className="w-full max-h-[500px] rounded-md shadow-lg"
+      controls
+      playsInline
+    >
+      <source src="/golf_swing.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
     </div>
   );
 }

@@ -26,21 +26,12 @@ export default function Home() {
 
         {/* Right Side - Text & Buttons */}
         <div className="w-full sm:w-1/2 text-center sm:text-left space-y-4 text-black">
-          <h1 className="text-3xl font-bold">Hi, I'm Nathan Ferdowski</h1>
+          <h1 className="text-3xl font-bold">Hi, I'm</h1>
+          <h1 className="text-6xl font-bold"> Nathan Ferdowski</h1>
           <p className="text-lg dark:text-black">
             I’m a passionate software developer focused on building creative and
             high-performance applications.
           </p>
-
-          {/* Buttons */}
-          <div className="flex justify-center sm:justify-start gap-4">
-            <a
-              href="/contact"
-              className="px-6 py-2 border border-blue-500 bg-blue-500 rounded-lg hover:bg-blue-900 dark:hover:bg-blue-900 text-white"
-            >
-              Contact Me
-            </a>
-          </div>
 
           {/* Social Icons */}
           <div className="flex justify-center sm:justify-start gap-4 mt-4">

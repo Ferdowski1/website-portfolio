@@ -5,15 +5,6 @@ import { useState, useEffect } from "react";
 
 const projects = [
   {
-    title: "Premier League Fantasy App",
-    desc:
-      "Fantasy app where users create their own custom Premier League team using a FIFA Ultimate Team-style interface. Powered by a Spring Boot backend and PostgreSQL, with over 600 players and a clean Next.js frontend.",
-    img: "/myteam.png",
-    tech: ["Spring Boot", "PostgreSQL", "Next.js", "Tailwind CSS"],
-    link: "/portfolio/premier-fantasy-team",
-    github: "https://github.com/Ferdowski1/premier-fantasy-backend"
-  },
-  {
     title: "Litecoin Whale Watcher",
     desc:
       "Full-stack tracker that monitors Litecoin blockchain activity and flags large wallet movements in real time. Built with Python and PostgreSQL on AWS EC2, and visualized through a dynamic Next.js frontend. Ideal for spotting buy/sell pressure from top holders.",
@@ -23,6 +14,23 @@ const projects = [
     github: "https://github.com/Ferdowski1/litecoin-whale-tracker",
     telegram: "https://t.me/litecointop200",
     youtube: "https://www.youtube.com/playlist?list=PLna8qj1ZuaSUsT7QA0mTehDO5_UXw2ijR"
+  },
+  {
+    title: "Distributed Logistics Tracker",
+    desc:
+      "A microservices-based system simulating a package tracking pipeline. Built with Spring Boot, RabbitMQ, and PostgreSQL, the app handles package intake, routing, and delivery updates through asynchronous messaging and service orchestration. Designed for distributed system practice and production-style architecture using Docker.",
+    img: "/dlt.png",
+    tech: ["Spring Boot", "RabbitMQ", "PostgreSQL", "Docker"],
+    github: "https://github.com/Ferdowski1/distributed-logistics-tracker"
+  },
+  {
+    title: "Premier League Fantasy App",
+    desc:
+      "Fantasy app where users create their own custom Premier League team using a FIFA Ultimate Team-style interface. Powered by a Spring Boot backend and PostgreSQL, with over 600 players and a clean Next.js frontend.",
+    img: "/myteam.png",
+    tech: ["Spring Boot", "PostgreSQL", "Next.js", "Tailwind CSS"],
+    //link: "/portfolio/premier-fantasy-team",
+    github: "https://github.com/Ferdowski1/premier-fantasy-backend"
   },
   {
     title: "YouTube Channel",

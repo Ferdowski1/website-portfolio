@@ -31,11 +31,11 @@ export default function Work() {
       <Entry
             title="AT&T"
             date="Feb 2019 – Dec 2021"
-            tech="Software Engineer (TypeScript, JavaScript, HTML)"
+            tech="Software Engineer (Angular, TypeScript, Node.js, Splunk)"
             bullets={[
               "Front-End developer for a cybersecurity visualization web application using Angular, Node.js, Vega-Lite and a Micro-Frontend architecture.",
-              "Performed data analysis on internal AT&T data, created reports, and presented to executives.",
-              "Investigated log data in Splunk, and built a rule based heuristic model to detect security threats."
+              "Investigated log data in Splunk, and built a rule based heuristic model to detect security threats.",
+              "Performed data analysis on internal AT&T data, created reports, and presented to executives."
             ]}
           />
       </div>
@@ -45,25 +45,36 @@ export default function Work() {
 
       <div className="space-y-10">
         <Entry
+            title="Distributed Logistics Tracker"
+            date="Apr 2025 – Apr 2025"
+            tech="Spring Boot, RabbitMQ, PostgreSQL, Docker"
+            bullets={[
+              "Built a microservices-based logistics simulation using Spring Boot, with services for intake, routing, and tracking packages.",
+              "Implemented asynchronous communication between services using RabbitMQ queues to simulate real-world message passing in distributed systems.",
+              "Designed and configured Dockerized PostgreSQL for a production-like local development environment with isolated services."
+            ]}
+          />
+
+        <Entry
+            title="Litecoin Whale Watcher"
+            date="Mar 2025 – Apr 2025"
+            tech="Python, PostgreSQL, AWS EC2, Docker, Nginx, Node.js, Express"
+            bullets={[
+              "Built a full-stack crypto analytics tool that tracks the top 200 Litecoin addresses activity.",
+              "Automated whale transaction detection using Python and APIs, sending alerts to a Telegram group.",
+              "Containerized and deployed a PostgreSQL database with Docker on AWS EC2 to persist and query wallet transaction data.",
+              "Created a secure REST API using Node.js and Express to serve tracked whale data, reverse-proxied behind NGINX with HTTPS via Let’s Encrypt."
+            ]}
+          />
+
+        <Entry
           title="Premier Fantasy App"
-          date="Mar 2025 – Apr 2025"
+          date="Mar 2025 – Mar 2025"
           tech="Spring Boot, PostgreSQL, Next.js, Tailwind"
           bullets={[
             "Built an interactive FIFA Ultimate Team-style web app allowing users to visually build their Premier League fantasy soccer team.",
-            "Engineered a full-stack architecture with a Spring Boot backend (Render) and PostgreSQL database (Supabase), exposing RESTful APIs.",
+            "Engineered a full-stack architecture with a Spring Boot backend and PostgreSQL database, exposing RESTful APIs.",
             "Automated the extraction of player statistics via web scraping for persistent storage and API consumption."
-          ]}
-        />
-
-        <Entry
-          title="Litecoin Analysis"
-          date="Mar 2025 – Apr 2025"
-          tech="Python, Matplotlib, Pine Script"
-          bullets={[
-            "Created a log-log power model to analyze Litecoin price trends.",
-            "Exported the model to TradingView using custom Pine Script for real-time visualization.",
-            "Produced YouTube videos to present model findings and share technical analysis.",
-            "Automated detection of major Litecoin wallet activity using Python."
           ]}
         />
 

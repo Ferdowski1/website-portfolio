@@ -62,7 +62,7 @@ export default function PlayerCard({ player, onSelect }: PlayerCardProps) {
   return (
     <div
       onClick={onSelect}
-      className="w-full h-full bg-blue-950 text-white p-2 rounded-xl shadow-md cursor-pointer transition-transform relative"
+      className="w-[165px] h-full bg-blue-950 text-white p-2 rounded-xl shadow-md cursor-pointer transition-transform relative"
     >
       <div className="flex justify-center text-xs sm:text-sm md:text-base font-bold mb-2 line-clamp-2 truncate">
         <span>{player.name}</span>

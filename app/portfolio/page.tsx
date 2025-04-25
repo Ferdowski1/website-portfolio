@@ -27,9 +27,9 @@ const projects = [
     title: "Premier League Fantasy App",
     desc:
       "Fantasy app where users create their own custom Premier League team using a FIFA Ultimate Team-style interface. Powered by a Spring Boot backend and PostgreSQL, with over 600 players and a clean Next.js frontend.",
-    img: "/myteam.png",
+    img: "/prempic.png",
     tech: ["Spring Boot", "PostgreSQL", "Next.js", "Tailwind CSS"],
-    //link: "/portfolio/premier-fantasy-team",
+    link: "/portfolio/premier-fantasy-team",
     github: "https://github.com/Ferdowski1/premier-fantasy-backend"
   },
   {

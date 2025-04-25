@@ -32,6 +32,23 @@ export default function About() {
     return () => observer.disconnect();
   }, []);
 
+    // Clean up scroll position and unlock scroll on page unload
+    useEffect(() => {
+      return () => {
+        window.scrollTo(0, 0);
+        document.body.style.overflow = "";
+      };
+    }, []);
+  
+    // Lock/unlock scroll when modal is open
+    useEffect(() => {
+      if (isOpen) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    }, [isOpen]);
+
   return (
     <div
       className="h-screen overflow-y-scroll snap-y snap-mandatory"
@@ -55,7 +72,7 @@ export default function About() {
         id="about-me"
         className="snap-start h-screen px-6 py-12 max-w-5xl mx-auto text-black"
       >
-        <div className="h-full flex flex-col justify-center space-y-6">
+        <div className="h-full flex flex-col justify-start pt-18 space-y-6">
           <h1 className="text-5xl font-bold mb-6">About Me</h1>
           <p>
             Hi, I’m Nathan Ferdowski. I graduated from the University of Illinois Urbana-Champaign with a degree in Computer Engineering. Since then, I've worked as a software developer at <strong>AT&T</strong> and <strong>SkillStorm</strong>, where I contributed to building scalable systems and enterprise applications.
@@ -75,9 +92,9 @@ export default function About() {
       {/* YouTube Videos Section */}
       <section
         id="youtube-videos"
-        className="snap-start h-screen px-6 py-12 max-w-5xl mx-auto text-black"
+        className="snap-start h-screen px-6 py-18 max-w-5xl mx-auto text-black"
       >
-        <div className="h-full flex flex-col justify-center space-y-4">
+        <div className="h-full flex flex-col justify-start pt-15 space-y-4">
           <h2 className="text-4xl font-semibold text-center">
             My most recent YouTube videos
           </h2>
@@ -126,9 +143,9 @@ export default function About() {
       {/* Power Model */}
       <section
       id="power-model"
-      className="snap-start h-screen px-6 py-12 max-w-5xl mx-auto text-black"
+      className="snap-start h-screen px-6 py-4 justify-start max-w-5xl mx-auto text-black"
     >
-      <div className="h-full flex items-center justify-center">
+      <div className="h-full flex items-center justify-start">
         <div className="scale-[0.9] transform origin-center flex flex-col justify-center space-y-4">
           <h2 className="text-4xl font-semibold text-center">
             Litecoin Power Model & Market Analysis
@@ -181,7 +198,7 @@ export default function About() {
   id="golf-swing"
   className="snap-start h-screen px-6 py-12 max-w-5xl mx-auto text-black overflow-y-auto"
 >
-  <div className="min-h-full flex flex-col justify-center space-y-4">
+  <div className="min-h-full flex flex-col justify-center pt-15 space-y-4">
     <h2 className="text-4xl font-semibold text-center">My golf swing (Still working on it)</h2>
     
     <video

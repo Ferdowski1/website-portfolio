@@ -17,11 +17,26 @@ export default function Work() {
         <Entry
             title="SkillStorm"
             date="Jul 2024 – Oct 2024"
-            tech="Power Platform Developer (C#, JavaScript, TypeScript, HTML)"
+            tech="Power Platform Developer (C#, JavaScript, TypeScript, HTML, Azure Functions, Cosmos DB)"
             bullets={[
-              "Utilized Power Platform such as dataverse, canvas apps, model driven apps, power automate and power pages to create applications for external users and internal employees.",
-              "Created custom REST APIs using azure functions to perform CRUD operations on CosmosDB.",
-              "Managed environments and security by utilizing business units, security groups and security roles."
+              "Developed scalable business applications for both external users and internal teams using Canvas Apps, Model-Driven Apps, Power Automate, and Power Pages integrated with Dataverse.",
+              "Created and exposed custom REST APIs using Azure Functions to securely perform CRUD operations on Cosmos DB, enabling dynamic data retrieval and updates from Power Platform apps.",
+              "Managed environments and security by utilizing business units, security groups and security roles.",
+              "Streamlined business workflows by automating approvals, notifications, and data transformations with Power Automate flows integrated into end-user applications."
+            ]}
+          />
+      </div>
+
+      {/* PMM */}
+      <div className="mb-10">
+        <Entry
+            title="PMM"
+            date="Jul 2024 – Oct 2024"
+            tech="Co-Founder & Software Engineer (Next.js, PostgreSQL, AWS EC2, AWS S3, Solana Pay, Git)"
+            bullets={[
+              "Developed a custom clothing e-commerce platform using Next.js and PostgreSQL to allow users to upload images for print-on-demand apparel.",
+              "Deployed the full-stack application on AWS EC2 and used S3 to store user-uploaded assets and product mockups.",
+              "Built an admin dashboard to manage orders, track production, and analyze customer and sales data, enabling data-driven decisions to improve product offerings and marketing strategy."
             ]}
           />
       </div>
@@ -31,7 +46,7 @@ export default function Work() {
       <Entry
             title="AT&T"
             date="Feb 2019 – Dec 2021"
-            tech="Software Engineer (Angular, TypeScript, Node.js, Splunk)"
+            tech="Software Engineer (Angular, Node.js, TypeScript, Vega-Lite, Splunk, Micro-Frontend)"
             bullets={[
               "Front-End developer for a cybersecurity visualization web application using Angular, Node.js, Vega-Lite and a Micro-Frontend architecture.",
               "Investigated log data in Splunk, and built a rule based heuristic model to detect security threats.",
@@ -51,7 +66,7 @@ export default function Work() {
             bullets={[
               "Built a microservices-based logistics simulation using Spring Boot, with services for intake, routing, and tracking packages.",
               "Implemented asynchronous communication between services using RabbitMQ queues to simulate real-world message passing in distributed systems.",
-              "Designed and configured Dockerized PostgreSQL for a production-like local development environment with isolated services."
+              "Built a containerized PostgreSQL environment using Docker to mirror production conditions and support isolated service testing."
             ]}
           />
 

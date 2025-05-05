@@ -10,7 +10,7 @@ export default function About() {
 
   const videos: { [key: string]: string } = {
     bitcoin: "n8QjQh5BHks",
-    litecoin: "lzR6HhcrE3Q",
+    litecoin: "-U9zewu-KLc",
     cardano: "4-Y7KIuI5rQ",
   };
 

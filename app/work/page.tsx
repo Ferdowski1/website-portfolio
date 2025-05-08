@@ -31,12 +31,12 @@ export default function Work() {
       <div className="mb-10">
         <Entry
             title="PMM"
-            date="Jul 2024 – Oct 2024"
-            tech="Co-Founder & Software Engineer (Next.js, PostgreSQL, AWS EC2, AWS S3, Solana Pay, Git)"
+            date="Mar 2023 – Jun 2024"
+            tech="Co-Founder & Software Engineer (Next.js, AWS Amplify, Lambda, DynamoDB, S3, Cognito, Stripe)"
             bullets={[
-              "Developed a custom clothing e-commerce platform using Next.js and PostgreSQL to allow users to upload images for print-on-demand apparel.",
-              "Deployed the full-stack application on AWS EC2 and used S3 to store user-uploaded assets and product mockups.",
-              "Built an admin dashboard to manage orders, track production, and analyze customer and sales data, enabling data-driven decisions to improve product offerings and marketing strategy."
+              "Designed and deployed a serverless system architecture using AWS Amplify, integrating Cognito, API Gateway, Lambda, S3, and DynamoDB to deliver a scalable, secure, and modular backend for dynamic user workflows and media storage.",
+              "Built a dynamic, session-aware cart and image upload system using Next.js, DynamoDB, and S3, supporting both guest and authenticated users with identity-based access control.",
+              "Integrated Stripe Checkout and webhooks to handle secure payments, and triggered post-payment workflows including order persistence and automated transactional emails via AWS SES."
             ]}
           />
       </div>
@@ -45,12 +45,12 @@ export default function Work() {
       <div className="mb-16">
       <Entry
             title="AT&T"
-            date="Feb 2019 – Dec 2021"
+            date="Feb 2019 – Jan 2022"
             tech="Software Engineer (Angular, Node.js, TypeScript, Vega-Lite, Splunk, Micro-Frontend)"
             bullets={[
               "Front-End developer for a cybersecurity visualization web application using Angular, Node.js, Vega-Lite and a Micro-Frontend architecture.",
-              "Investigated log data in Splunk, and built a rule based heuristic model to detect security threats.",
-              "Performed data analysis on internal AT&T data, created reports, and presented to executives."
+              "Designed and implemented a rule-based heuristic detection model using log data from Splunk, improving the identification of potential security threats across internal network activity.",
+              "Collaborated with cybersecurity teams to perform data analysis on internal traffic and anomaly patterns, generating dashboards and executive reports that informed policy and security decisions."
             ]}
           />
       </div>

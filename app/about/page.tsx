@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 export default function About() {
-  const [videoId, setVideoId] = useState("n8QjQh5BHks");
+  const [videoId, setVideoId] = useState("-U9zewu-KLc");
   const [youtubeLoaded, setYoutubeLoaded] = useState(false);
   const [golfLoaded, setGolfLoaded] = useState(true);
   const [currentSection, setCurrentSection] = useState("about-me");
@@ -11,7 +11,7 @@ export default function About() {
   const videos: { [key: string]: string } = {
     bitcoin: "n8QjQh5BHks",
     litecoin: "-U9zewu-KLc",
-    cardano: "4-Y7KIuI5rQ",
+    cardano: "yZkO1tDnCZY",
   };
 
   useEffect(() => {
@@ -144,7 +144,7 @@ export default function About() {
       <section
       id="power-model"
       className="snap-start h-screen px-6 py-4 justify-start max-w-5xl mx-auto text-black"
-    >
+      >
       <div className="h-full flex items-center justify-start">
         <div className="scale-[0.9] transform origin-center flex flex-col justify-center space-y-4">
           <h2 className="text-4xl font-semibold text-center">
@@ -194,23 +194,48 @@ export default function About() {
       )}
     </section>
 
+    {/* Golf */}
     <section
-  id="golf-swing"
-  className="snap-start h-screen px-6 py-12 max-w-5xl mx-auto text-black overflow-y-auto"
->
-  <div className="min-h-full flex flex-col justify-center pt-15 space-y-4">
-    <h2 className="text-4xl font-semibold text-center">My golf swing (Still working on it)</h2>
-    
-    <video
-      className="w-full max-h-[500px] rounded-md shadow-lg"
-      controls
-      playsInline
+      id="golf-swing"
+      className="snap-start h-screen px-6 py-12 max-w-5xl mx-auto text-black overflow-y-auto"
     >
-      <source src="/golf_swing.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</section>
+      <div className="min-h-full flex flex-col justify-center pt-15 space-y-4">
+        <h2 className="text-4xl font-semibold text-center">My golf swing (Still working on it)</h2>
+        
+        <video
+          className="w-full max-h-[500px] rounded-md shadow-lg"
+          controls
+          playsInline
+        >
+          <source src="/golf_swing.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    
+    {/* Trade
+    <section
+      id="Trade"
+      className="snap-start h-screen px-6 py-4 justify-start max-w-5xl mx-auto text-black"
+    >
+      <div className="min-h-full flex flex-col justify-center pt-15 space-y-4">
+      <div className="scale-[0.9] transform origin-center flex flex-col justify-center space-y-4">
+        <h2 className="text-4xl font-semibold text-center">Trading</h2>
+        <img
+            src="/btctrade.png"
+            alt="Bitcoin Trade"
+            className="max-h-[80vh] w-auto mx-auto"
+          />
+
+        <p>
+          BTC TRADE BABY
+        </p>
+
+      </div>
+      </div>
+    </section>
+          */}
 
     </div>
   );

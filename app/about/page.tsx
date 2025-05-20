@@ -2,15 +2,15 @@
 import { useEffect, useState } from "react";
 
 export default function About() {
-  const [videoId, setVideoId] = useState("-U9zewu-KLc");
+  const [videoId, setVideoId] = useState("D8u6TSqAN1Y");
   const [youtubeLoaded, setYoutubeLoaded] = useState(false);
   const [golfLoaded, setGolfLoaded] = useState(true);
   const [currentSection, setCurrentSection] = useState("about-me");
   const [isOpen, setIsOpen] = useState(false);
 
   const videos: { [key: string]: string } = {
-    bitcoin: "n8QjQh5BHks",
-    litecoin: "-U9zewu-KLc",
+    bitcoin: "yFvej4ZDdo8",
+    litecoin: "D8u6TSqAN1Y",
     cardano: "yZkO1tDnCZY",
   };
 

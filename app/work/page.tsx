@@ -15,9 +15,9 @@ export default function Work() {
       {/* SkillStorm */}
       <div className="mb-10">
         <Entry
-            title="SkillStorm"
+            title="SkillStorm - Software Engineer - Power Platform & Azure"
             date="Jul 2024 – Oct 2024"
-            tech="Power Platform Developer (C#, JavaScript, TypeScript, HTML, Azure Functions, Cosmos DB)"
+            tech=""
             bullets={[
               "Developed scalable business applications for both external users and internal teams using Canvas Apps, Model-Driven Apps, Power Automate, and Power Pages integrated with Dataverse.",
               "Created and exposed custom REST APIs using Azure Functions to securely perform CRUD operations on Cosmos DB, enabling dynamic data retrieval and updates from Power Platform apps.",
@@ -30,9 +30,9 @@ export default function Work() {
       {/* PMM */}
       <div className="mb-10">
         <Entry
-            title="PMM"
+            title="PMM - Senior Software Engineer - Cloud Architecture"
             date="Mar 2023 – Jun 2024"
-            tech="Co-Founder & Software Engineer (Next.js, AWS Amplify, Lambda, DynamoDB, S3, Cognito, Stripe)"
+            tech=""
             bullets={[
               "Designed and deployed a serverless system architecture using AWS Amplify, integrating Cognito, API Gateway, Lambda, S3, and DynamoDB to deliver a scalable, secure, and modular backend for dynamic user workflows and media storage.",
               "Built a dynamic, session-aware cart and image upload system using Next.js, DynamoDB, and S3, supporting both guest and authenticated users with identity-based access control.",
@@ -44,13 +44,25 @@ export default function Work() {
       {/* AT&T */}
       <div className="mb-16">
       <Entry
-            title="AT&T"
-            date="Feb 2019 – Jan 2022"
-            tech="Software Engineer (Angular, Node.js, TypeScript, Vega-Lite, Splunk, Micro-Frontend)"
+            title="AT&T - Software Engineer - Cybersecurity"
+            date="Apr 2020 – Jan 2022"
+            tech=""
             bullets={[
-              "Front-End developer for a cybersecurity visualization web application using Angular, Node.js, Vega-Lite and a Micro-Frontend architecture.",
-              "Designed and implemented a rule-based heuristic detection model using log data from Splunk, improving the identification of potential security threats across internal network activity.",
+              "Designed and implemented a rule-based heuristic detection model using log data from Splunk,improving the identification of potential security threats across internal network activity.",
+              "Built and maintained a data health monitoring dashboard in Splunk, tracking the volume and integrity of incoming log data to ensure reliability and completeness of security analytics.",
               "Collaborated with cybersecurity teams to perform data analysis on internal traffic and anomaly patterns, generating dashboards and executive reports that informed policy and security decisions."
+            ]}
+          />
+      </div>
+
+      <div className="mb-16">
+      <Entry
+            title="AT&T - Software Engineer - Full Stack Developer"
+            date="Feb 2019 – Apr 2020"
+            tech=""
+            bullets={[
+              "Developed modular, interactive UI components using Angular and Vega-Lite in a Micro-Frontend architecture, enabling dynamic visualization of network security data.",
+              "Collaborated on backend services by integrating MongoDB and Cassandra data sources, and supported CI/CD pipelines using Jenkins to streamline deployment and testing of full-stack features."
             ]}
           />
       </div>
@@ -59,26 +71,28 @@ export default function Work() {
       <h1 className="text-3xl font-bold mb-8">Projects</h1>
 
       <div className="space-y-10">
-        <Entry
-            title="Distributed Logistics Tracker"
-            date="Apr 2025 – Apr 2025"
-            tech="Spring Boot, RabbitMQ, PostgreSQL, Docker"
-            bullets={[
-              "Built a microservices-based logistics simulation using Spring Boot, with services for intake, routing, and tracking packages.",
-              "Implemented asynchronous communication between services using RabbitMQ queues to simulate real-world message passing in distributed systems.",
-              "Built a containerized PostgreSQL environment using Docker to mirror production conditions and support isolated service testing."
-            ]}
-          />
 
         <Entry
             title="Litecoin Whale Watcher"
-            date="Mar 2025 – Apr 2025"
+            date="Jan 2025 – Present"
             tech="Python, PostgreSQL, AWS EC2, Docker, Nginx, Node.js, Express"
             bullets={[
               "Built a full-stack crypto analytics tool that tracks the top 200 Litecoin addresses activity.",
               "Automated whale transaction detection using Python and APIs, sending alerts to a Telegram group.",
               "Containerized and deployed a PostgreSQL database with Docker on AWS EC2 to persist and query wallet transaction data.",
               "Created a secure REST API using Node.js and Express to serve tracked whale data, reverse-proxied behind NGINX with HTTPS via Let’s Encrypt."
+            ]}
+          />
+
+
+        <Entry
+            title="Distributed Logistics Tracker"
+            date="Mar 2025 – Apr 2025"
+            tech="Spring Boot, RabbitMQ, PostgreSQL, Docker"
+            bullets={[
+              "Built a microservices-based logistics simulation using Spring Boot, with services for intake, routing, and tracking packages.",
+              "Implemented asynchronous communication between services using RabbitMQ queues to simulate real-world message passing in distributed systems.",
+              "Built a containerized PostgreSQL environment using Docker to mirror production conditions and support isolated service testing."
             ]}
           />
 

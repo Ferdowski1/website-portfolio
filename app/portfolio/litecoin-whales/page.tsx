@@ -1,7 +1,8 @@
 "use client"
 import { useEffect, useState } from 'react';
+import BuySellStackedBar from './BuySellStackedBar';
 
-type WhaleActivity = {
+export type WhaleActivity = {
   id: number;
   rank: number;
   address: string;
@@ -9,7 +10,7 @@ type WhaleActivity = {
   direction: 'buy' | 'sell';
   txid: string;
   blockno: number;
-  time: string; // or Date if you're parsing it
+  time: string; 
 };
 
 
@@ -81,6 +82,8 @@ export default function LitecoinWhales() {
             />
           </label>
         </div>
+
+        <BuySellStackedBar whales={whales} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
         {whales.filter((w) => {

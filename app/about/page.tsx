@@ -143,9 +143,9 @@ export default function About() {
       {/* Power Model */}
       <section
       id="power-model"
-      className="snap-start h-screen px-6 py-4 justify-start max-w-5xl mx-auto text-black"
+      className="snap-start h-screen px-6 py-18 max-w-5xl mx-auto text-black"
       >
-      <div className="h-full flex items-center justify-start">
+      <div className="h-full flex items-center justify-start pt-15 space-y-4">
         <div className="scale-[0.9] transform origin-center flex flex-col justify-center space-y-4">
           <h2 className="text-4xl font-semibold text-center">
             Litecoin Power Model & Market Analysis

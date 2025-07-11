@@ -15,14 +15,13 @@ export default function Work() {
       {/* SkillStorm */}
       <div className="mb-10">
         <Entry
-            title="SkillStorm - Software Engineer - Power Platform & Azure"
-            date="Jul 2024 – Oct 2024"
+            title="SkillStorm - Software Engineer - Full Stack"
+            date="Jul 2024 – Apr 2025"
             tech=""
             bullets={[
-              "Developed scalable business applications for both external users and internal teams using Canvas Apps, Model-Driven Apps, Power Automate, and Power Pages integrated with Dataverse.",
-              "Created and exposed custom REST APIs using Azure Functions to securely perform CRUD operations on Cosmos DB, enabling dynamic data retrieval and updates from Power Platform apps.",
-              "Managed environments and security by utilizing business units, security groups and security roles.",
-              "Streamlined business workflows by automating approvals, notifications, and data transformations with Power Automate flows integrated into end-user applications."
+              "Built full-stack web applications using React, Node.js, Express.js, and TypeScript, delivering scalable RESTful services and enhancing user experience and system performance.",
+              "Designed and implemented secure JWT-based authentication with role-based access control, ensuring data protection for both internal and external users.",
+              "Engineered database-driven features with MongoDB and PostgreSQL, enabling efficient CRUD operations and seamless integration between front-end and back-end systems."
             ]}
           />
       </div>
@@ -34,9 +33,9 @@ export default function Work() {
             date="Mar 2023 – Jun 2024"
             tech=""
             bullets={[
-              "Designed and deployed a serverless system architecture using AWS Amplify, integrating Cognito, API Gateway, Lambda, S3, and DynamoDB to deliver a scalable, secure, and modular backend for dynamic user workflows and media storage.",
-              "Built a dynamic, session-aware cart and image upload system using Next.js, DynamoDB, and S3, supporting both guest and authenticated users with identity-based access control.",
-              "Integrated Stripe Checkout and webhooks to handle secure payments, and triggered post-payment workflows including order persistence and automated transactional emails via AWS SES."
+              "Architected and built a serverless backend on AWS using Amplify, Cognito, API Gateway, Lambda, S3, and DynamoDB, enabling secure, scalable user workflows and media storage.",
+              "Designed and implemented a cart microservice using DynamoDB’s flexible schema and Redis caching to support low-latency, high-volume read/write operations for authenticated users.",
+              "Integrated Stripe Checkout and webhooks to handle secure payments, leveraging AWS SQS to decouple and orchestrate post-payment workflows including order persistence and automated email confirmations via SES."
             ]}
           />
       </div>
@@ -45,7 +44,7 @@ export default function Work() {
       <div className="mb-16">
       <Entry
             title="AT&T - Software Engineer - Cybersecurity"
-            date="Apr 2020 – Jan 2022"
+            date="Apr 2021 – Jan 2023"
             tech=""
             bullets={[
               "Designed and implemented a rule-based heuristic detection model using log data from Splunk,improving the identification of potential security threats across internal network activity.",
@@ -57,12 +56,13 @@ export default function Work() {
 
       <div className="mb-16">
       <Entry
-            title="AT&T - Software Engineer - Full Stack Developer"
-            date="Feb 2019 – Apr 2020"
+            title="AT&T - Software Engineer - Full Stack"
+            date="Feb 2019 – Apr 2021"
             tech=""
             bullets={[
-              "Developed modular, interactive UI components using Angular and Vega-Lite in a Micro-Frontend architecture, enabling dynamic visualization of network security data.",
-              "Collaborated on backend services by integrating MongoDB and Cassandra data sources, and supported CI/CD pipelines using Jenkins to streamline deployment and testing of full-stack features."
+              "Developed a full-stack data visualization platform using React, featuring a customizable dashboard and secure user authentication for tailored access to charts and analytical tools.",
+              "Built scalable microservices with Node.js, Express, and MongoDB to manage user preferences, chart configurations, and real-time data retrieval.",
+              "Integrated CI/CD pipelines with Jenkins to automate testing and deployment of microservices, reducing release cycle time and ensuring reliable feature delivery."
             ]}
           />
       </div>
@@ -163,7 +163,7 @@ export default function Work() {
       {/* Skills & Certifications */}
       <div className="mt-16">
         <h2 className="text-2xl font-semibold mb-2">Skills</h2>
-        <p className="mb-4">Angular, Data Analysis, Java, JavaScript, PostgreSQL, Python, React, Spring Boot, Web Development</p>
+        <p className="mb-4">Java, Python, JavaScript, TypeScript, HTML, CSS, Angular, React, Next.js, Spring Boot, Express.js, Node.js, Vega-Lite, PostgreSQL, MongoDB, Cassandra, Cosmos DB, RabbitMQ, SQS, REST APIs, Webhooks, Splunk, Git, GitHub, Jenkins, Docker, NGINX, CI/CD Pipelines, Cloud, DevOps, and Architecture</p>
 
         <h2 className="text-2xl font-semibold mb-2">Certifications</h2>
         <p>

@@ -50,7 +50,7 @@ export default function ShootingTest() {
   //const postApi = 'http://localhost:3002/session';
   const postApi = 'https://api.nathanferdowski.dev/cavaliers/session';
   //const getApi = 'http://localhost:3002/sessions?';
-  const getApi = 'https://api.nathanferdowski.dev/cavaliers/sessions';
+  const getApi = 'https://api.nathanferdowski.dev/cavaliers/sessions?';
 
   const handleSubmit = async () => {
     setSubmitAttempted(true);

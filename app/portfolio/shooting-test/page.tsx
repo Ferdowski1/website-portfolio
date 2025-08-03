@@ -2,14 +2,14 @@
 import "./shooting-test.css"
 import { useState } from "react"
 
-export type Location = 
+type Location = 
   | 'leftCorner'
   | 'leftWing'
   | 'topKey'
   | 'rightWing'
   | 'rightCorner';
 
-export const LOCATIONS: Location[] = [
+const LOCATIONS: Location[] = [
   'leftCorner', 'leftWing', 'topKey', 'rightWing', 'rightCorner'
 ];
 

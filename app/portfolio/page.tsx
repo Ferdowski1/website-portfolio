@@ -5,6 +5,15 @@ import { useState, useEffect } from "react";
 
 const projects = [
   {
+    title: "Cavaliers Shooting Tracker",
+    desc:
+      "Interactive full-stack web app for tracking and visualizing basketball shooting sessions. Records made/missed shots from five court zones and logs performance to a PostgreSQL database via a custom REST API. Includes search functionality and mock NBA player data.",
+    img: "/cavs-shooting.png",
+    tech: ["React.js", "Node.js", "PostgreSQL", "AWS EC2", "REST API"],
+    link: "/portfolio/shooting-test",
+    github: "https://github.com/Ferdowski1/website-portfolio/tree/main/app/portfolio/shooting-test",
+  },
+  {
     title: "Litecoin Whale Watcher",
     desc:
       "Full-stack tracker that monitors Litecoin blockchain activity and flags large wallet movements in real time. Built with Python and PostgreSQL on AWS EC2, and visualized through a dynamic Next.js frontend. Ideal for spotting buy/sell pressure from top holders.",
